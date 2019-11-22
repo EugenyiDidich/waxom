@@ -1,0 +1,54 @@
+/*==========  Desktop First Method  ==========*/
+//@media only screen and (min-width : 480px) 
+@media only screen and (max-width : 10200px)  
+	.container 
+		padding: 0 15px
+		
+@media only screen and (max-width : 1200px) 
+	.header-height 
+		padding: 0 15px
+	.container 
+		width: 940px
+		margin: auto
+	.gallery-container 
+		width: 805px
+
+@media only screen and (max-width : 992px) 
+	.container 
+		width: 750px
+		margin: auto
+		width: auto
+	.gallery-container 
+		width: 805px
+
+@media only screen and (max-width : 768px) 
+	.gallery-container 
+		width: 420px
+
+@media only screen and (max-width : 480px) 
+	.gallery-container 
+		width: auto
+
+// /* Extra Small Devices, Phones */
+@mixin phone 
+	@media screen and (max-width: 480px) 
+		@content;
+
+
+@mixin tablet 
+	@media screen and (max-width: 768px) 
+		@content;
+
+	
+@mixin laptop 
+	@media screen and (max-width: 992px) 
+		@content;
+
+@mixin desktop 
+	@media screen and (max-width: 1200px) 
+		@content;
+
+@mixin minPhone 
+	@media screen and (max-width: 360px) 
+		@content;
+			
