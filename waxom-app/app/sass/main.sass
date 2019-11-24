@@ -1,16 +1,7 @@
 @import vars
 @import fonts
-@import libs
 @import media
-@import topHeader
-@import culture
-@import about
-@import quotes
-@import team
-@import clients	
-@import contact
-@import gallery
-@import footer
+@import main-header
 
 
 input, textarea
@@ -42,8 +33,9 @@ button
 
 // Custom Sass / Remove before use
 .container 
-	max-width: 1200px
+	max-width: 1230px
 	margin: 0 auto
+	padding: 0 30px
 h3 
 	font-size: 20px
 
@@ -61,23 +53,10 @@ ul
 .title 
 	display: inline-block
 	position: relative
-	color: $accent
-	font-family: "WorkSans-Bold"
-	font-size: 22px
-	font-weight: 700
-	text-transform: uppercase
-	line-height: 1
-
-	&:after 
-		position: absolute
-		content: ""
-		width: 100px
-		height: 2px
-		background-color: $accent
-		bottom: -22px
-		left: 50%
-		right: 0
-		transform: translateX(-50%)
+	color: #555555
+	font-family: "Raleway-SemiBold"
+	font-size: 30px
+	font-weight: 400
 
 section 
 	padding-top: 100px

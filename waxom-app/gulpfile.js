@@ -44,8 +44,7 @@ gulp.task('styles', function() {
 // Scripts & JS Libraries
 gulp.task('scripts', function() {
 	return gulp.src([
-		'node_modules/jquery/dist/jquery.min.js', 
-		'node_modules/lightbox2/dist/js/lightbox.min.js', 
+		'node_modules/jquery/dist/jquery.min.js',  
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
