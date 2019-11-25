@@ -11,6 +11,9 @@
         justify-content: center
         flex-wrap: wrap
 
+        @include phone 
+            flex-direction: column
+
         .counters-item
             margin: 0 35px
 
@@ -20,6 +23,9 @@
             .counter-icon 
                 margin-bottom: 30px
 
+                @include tablet 
+                    margin-bottom: 15px
+
             .counter-number 
                 color: #ffffff
                 font-family: "Montserrat-UltraLight"
@@ -28,7 +34,12 @@
                 line-height: 36px
                 margin-bottom: 21px
 
-            .counter-name   
+                @include tablet 
+                    font-size: 32px
+                    margin-bottom: 15px
+
+            .counter-name  
+                position: relative 
                 color: #c7b299
                 font-family: Montserrat-Light
                 font-size: 14px
@@ -37,5 +48,16 @@
                 text-transform: uppercase
                 margin-bottom: 92px
 
+                &:after 
+                    content: ""
+                    position: absolute
+                    bottom: -30px
+                    left: 50%
+                    transform: translateX(-50%)
+                    width: 30px
+                    height: 2px
+                    background-color: #ffffff
+
                 @include tablet 
                     margin-bottom: 60px
+                    font-size: 12px
