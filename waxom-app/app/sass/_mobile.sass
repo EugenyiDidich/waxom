@@ -1,0 +1,71 @@
+.mobile 
+    .container 
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+
+    .hand-img   
+        width: 42%
+        img 
+            margin-bottom: -5px
+            max-width: 100%
+
+        @include tablet 
+            display: none
+
+    .text-wrapper 
+        margin-top: 100px
+        position: relative
+        width: 58%
+        text-align: left
+        padding-bottom: 183px
+
+        @include laptop 
+            padding-bottom: 60px
+            margin-top: 60px
+
+        @include tablet 
+            width: 100%
+            text-align: center
+            margin-top: 40px
+
+
+        .main-text 
+            padding: 0
+            margin-bottom: 45px
+
+            @include laptop 
+                font-size: 14px
+            
+            @include phone 
+                font-size: 12px
+                line-height: 1.6
+        
+        .text-item 
+            padding-left: 50px
+            display: flex
+            align-items: center
+            justify-content: flex-start
+
+            @include laptop  
+                padding-left: 25px
+
+            @include tablet 
+                text-align: left
+
+            .text-icon
+                margin-right: 29px
+            
+            p 
+                color: #8c8c8c
+                font-family: Montserrat-Light
+                font-size: 16px
+                font-weight: 300
+                line-height: 32px
+
+                @include laptop 
+                    font-size: 14px
+
+                @include phone 
+                    font-size: 12px
+                    line-height: 1.6

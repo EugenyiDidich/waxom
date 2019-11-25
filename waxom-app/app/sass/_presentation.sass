@@ -1,0 +1,43 @@
+.presentation 
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+    min-height: 700px
+    background-image: url(../img/present.jpg)
+    background-size: cover
+    background-position: center
+
+    @include tablet 
+        min-height: 450px
+    
+    h3, .main-text
+        color: #fff
+
+    .main-text
+        margin-bottom: 40px
+
+        @include phone 
+            margin-bottom: 20px
+
+    .play 
+        display: flex
+        margin: 0 auto
+        margin-bottom: 44px
+        width: 100px
+        height: 100px
+        background-image: url(../img/icons/play.png)
+        background-size: cover
+        background-repeat: no-repeat
+
+        @include phone 
+            width: 50px
+            height: 50px
+
+    .video-time 
+        color: #c7b299
+        font-family: Montserrat-regular
+        font-size: 14px
+        font-weight: 400
+        line-height: 24px

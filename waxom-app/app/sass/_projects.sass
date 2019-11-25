@@ -1,0 +1,170 @@
+.projects 
+    .main-text 
+        margin-bottom: 40px
+
+.main-btn 
+    margin-bottom: 80px
+
+    @include tablet 
+        margin-bottom: 40px
+
+.filter-categ 
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 25px
+    flex-wrap: wrap
+
+    .mixitup-control-active 
+        background-color: $brown
+
+    button 
+        padding: 10px 24px
+        line-height: 1
+        margin: 0 5px
+        font-family: Montserrat-Light
+        font-size: 14px
+        font-weight: 300
+        line-height: 21px
+        border-radius: 3px
+        border: 1px solid #ebebeb
+        margin-bottom: 10px
+
+        @include tablet 
+            padding: 10px
+
+
+.mix-wrapper 
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    flex-wrap: wrap
+
+    @include phone 
+        flex-direction: column
+
+.mix
+    overflow: hidden
+    margin: 15px
+    width: calc(33% - 30px)
+
+    @include tablet 
+        width: calc(50% - 30px)
+
+    @include phone 
+        width: 90%
+        margin: 0 auto
+        margin-bottom: 30px
+
+    
+    &:hover 
+
+        .mix-img 
+            .extra 
+                .link, .loupe 
+                    visibility: visible
+
+            &:after
+                transition: background-color .3s
+                background-color: rgba(17, 17, 17, 0.7)
+                
+        .mix-about 
+            transition: background-color .3s
+            background-color: #362f2d
+
+            &:after
+                transition: background-color .3s
+                background-color: #362f2d
+
+        .mix-title 
+
+            transition: color .3s
+            color: #fff
+
+    .mix-img  
+        position: relative  
+
+        &:after 
+            position: absolute
+            content: ""
+            left: 0
+            right: 0
+            bottom: 0
+            top: 0
+
+        .extra 
+            z-index: 999
+            position: absolute 
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+
+            .link, .loupe
+                visibility: hidden
+                display: inline-block
+                width: 26px
+                height: 26px
+
+            .link
+                margin-right: 25px
+                background-image: url(../img/icons/link.png)
+
+            .loupe 
+                background-image: url(../img/icons/lupa.png)
+                cursor: pointer
+
+
+        img 
+            transition: transform .3s
+            max-width: 100%
+
+
+    .mix-about 
+        position: relative
+        padding: 30px 0 27px 29px
+        text-align: left
+        z-index: 999
+        margin-top: -5px
+
+        @include tablet 
+            text-align: center
+            padding-left: 0
+
+        &:after 
+            position: absolute
+            content: ""
+            width: 30px
+            height: 50px
+            background-color: #ffff
+            transform: rotate(45deg)
+            top: -14px
+            left: 19px
+            z-index: -1
+
+        .mix-title 
+            font-family: Raleway-Medium
+            font-size: 20px
+            font-weight: 500
+            margin-bottom: 14px
+
+            @include tablet 
+                font-size: 18px
+
+        .mix-text 
+            color: #d1d1d1
+            font-family: Montserrat-Light
+            font-size: 14px
+            font-weight: 300
+            line-height: 20px
+
+            @include tablet 
+                font-size: 14px
+
+.light 
+    .mix-img:after 
+        background-color: transparent !important
+
+.mix:hover 
+    .link 
+        visibility: visible
+
