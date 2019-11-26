@@ -6,7 +6,6 @@
 	<title>waxom</title>
 	<meta name="description" content="waxom">
 	<meta name="viewport" content="width=device-width">
-	<link rel="icon" href="img/favicon.ico">
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -250,11 +249,14 @@
 	<button class="main-btn">Load More</button>
 </section>
 <section class="presentation">
-	<div class="container">
+		<video class="player" id="video" controls width="100%" height="100%" preload="metadata">
+			<source src="video/video.mp4">
+		  </video>
+	<div class="container play-wrapper">
 		<button class="play"></button>
 		<h3 class="title">Waxom Video Presentation</h3>
 		<div class="main-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</div>
-		<div class="video-time">3:44</div>
+		<div class="video-time">24:45</div>
 	</div>
 </section>
 <section class="mobile">
@@ -292,7 +294,7 @@
 		</div>
 	</div>
 </section>
-<section class="counters">
+<section class="counters" id="counters">
 	<div class="container">
 		<div class="counter-list">
 				<div class="counters-item">
@@ -327,7 +329,7 @@
 	<div class="container">
 		<h3 class="title">Recent Posts.</h3>
 		<div class="main-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</div>
-		<div class="posts-list">
+		<div class="posts-list sly">
 			<div class="post-item">
 				<div class="date">
 					<div class="day">30</div>
@@ -339,7 +341,7 @@
 				<div class="post-about">
 					<div class="post-title">Lorem ipsum dolor sit amet</div>
 					<div class="post-text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</div>
-					<div class="post-link">Read More</div>
+					<a href="#" class="post-link">Read More</a>
 				</div>
 			</div>
 			<div class="post-item">
@@ -353,7 +355,21 @@
 				<div class="post-about">
 					<div class="post-title">Lorem ipsum dolor sit amet</div>
 					<div class="post-text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</div>
-					<div class="post-link">Read More</div>
+					<a href="#" class="post-link">Read More</a>
+				</div>
+			</div>
+			<div class="post-item">
+					<div class="date">
+						<div class="day">30</div>
+						<div class="month">Sep.</div>
+					</div>
+				<div class="post-img">
+					<img src="img/posts/2.png" alt="post">
+				</div>
+				<div class="post-about">
+					<div class="post-title">Lorem ipsum dolor sit amet</div>
+					<div class="post-text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</div>
+					<a href="#" class="post-link">Read More</a>
 				</div>
 			</div>
 			<div class="post-item">
@@ -367,36 +383,96 @@
 				<div class="post-about">
 					<div class="post-title">Lorem ipsum dolor sit amet</div>
 					<div class="post-text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</div>
-					<div class="post-link">Read More</div>
+					<a href="#" class="post-link">Read More</a>
 				</div>
+			</div>
+		</div>
+		<div class="nav-btns">
+			<div class="prev1">
+				<div class="triangle"></div>
+			</div>
+			<div class="next1">
+				<div class="triangle"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="partners">
+	<div class="container">
+		<div class="logo-list">
+			<div class="logo-item">
+				<img src="img/logo-01.png" alt="logo"></div>
+			<div class="logo-item">
+				<img src="img/logo-02.png" alt="logo"></div>
+			<div class="logo-item">
+				<img src="img/logo-03.png" alt="logo"></div>
+		</div>
+	</div>
+</section>
+<section class="about">
+	<div class="container">
+		<div class="about-item">
+			<a href="#" class="logo">
+				<img src="img/icons/logo.png" alt="logo">
+				<div class="logo-name">Waxom</div>
+			</a>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.</p>
+			<a href="#" class="link">Read More</a>
+		</div>
+		<div class="about-item">
+			<h4 class="about-title">Recent Posts</h4>
+			<div class="about-text">
+				<div class="date">September 08, 2015</div>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+			</div>
+			<div class="about-text">
+					<div class="date">September 08, 2015</div>
+					<p>Diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+			</div>
+			<div class="about-text">
+					<div class="date">September 08, 2015</div>
+					<p>Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima</p>
+			</div>
+		</div>
+		<div class="about-item">
+			<h4 class="about-title">Our Twitter</h4>
+			<div class="about-text">
+					<p>@waxom Cum soluta nobis eleifend option congue nihil imperdiet doming</p>
+					<div class="hours">3 mins ago</div>
+			</div>
+			<div class="about-text">
+					<p>Mirum est #envato notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum</p>
+					<div class="hours">3 mins ago</div>
+			</div>
+			<div class="about-text">
+					<p>Soluta nobis option bit.ly/1Hniso7</p>
+					<div class="hours">20 days ago</div>
+			</div>
+		</div>
+		<div class="about-item">
+			<h4 class="title">Dribbble Widget</h4>
+			<div class="about-img">
+				<img src="img/dribble/1.png" alt="img">
+				<img src="img/dribble/2.png" alt="img">
+				<img src="img/dribble/3.png" alt="img">
+				<img src="img/dribble/4.png" alt="img">
 			</div>
 		</div>
 	</div>
 </section>
 <section class="footer">
-		<div class="footer-wrap container">
-			<div class="footer-left">
-				<h6 class="copyright">© 2019 TARO PR</h6>
-				<ul class="socials">
-					<li class="socials-item">
-						<a target="_blank" href="https://www.facebook.com/taropr/" class="socials-link">
-							<i class="fa fa-facebook"></i>
-						</a>
-					</li>
-					<li class="socials-item">
-						<a target="_blank" href="#" class="socials-link">
-							<i class="fab fa-twitter"></i>
-						</a>
-					</li>
-					<li class="socials-item">
-						<a target="_blank" href="https://www.instagram.com/taropr/" class="socials-link">
-							<i class="fab fa-instagram"></i>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-right"><a target="_blank" href="https://www.mouthmedia.com/" class="design">Website design by Mouth Media Inc.</a></div>
+	<div class="container">
+		<div class="left-text">
+				<p>Copyright © 2015 <a href="#">Waxom</a> </p>
+				<p><a href="#">Privacy Policy</a></p>
+				<p><a href="#">FAQ</a></p>
+				<p><a href="#">Support</a></p>
 		</div>
+		<div class="right-text">
+				<p>Designed by <a href="#">ThemeFire</a></p>
+				<p>Only on <a href="#">Envato Market</a></p>
+		</div>
+	</div>
 </section>
 <script src="js/scripts.min.js"></script>
 <script type="text/javascript" src="libs/slick/slick.min.js"></script>

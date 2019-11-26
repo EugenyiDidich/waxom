@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		$(".search-btn").toggleClass('active')
 	});
 
+
 	$('.top-carousel').slick({
 		infinite: true,
 		slidesToShow: 1,
@@ -59,7 +60,39 @@ document.addEventListener("DOMContentLoaded", function() {
 		nextArrow: $('.next'),
 	  });
 
-	  //projects cards img
+	$('.sly').slick({
+		infinite: true,
+		loop: true,
+		centeredMode: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow: $('.prev1'),
+		nextArrow: $('.next1'),
+		responsive: [
+			
+			{
+			  breakpoint: 800,
+			  settings: {
+				slidesToShow: 2
+			  }
+			},
+			{
+				breakpoint: 480,
+				settings: {
+				  slidesToShow: 1
+				}
+			  }
+
+		  ]
+	});
+
+	 var video = $('.player')[0]
+    // 	meta = $('.video-time');
+	// 	
+	video.addEventListener("loadedmetadata", function() {
+		console.log(video.duration / 60)
+	})
 
 	  $( ".loupe" ).mouseover(function() {
 		$(this).parent().siblings('.mix-img img').css({'transform': 'scale(1.2)'});
@@ -73,6 +106,39 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	//mixitup 
 	var mixer = mixitup('.mix-wrapper');
-});
 
-	
+	$('.play').on('click', function(){
+		$('.presentation').addClass('play-height');
+		$('.player').get(0).play();
+	});
+
+
+
+	function start_count(){
+		$('.counter-number').each(function () {
+			$(this).prop('Counter',0).animate({
+				Counter: $(this).text()
+			}, {
+				duration: 4000,
+				easing: 'swing',
+				step: function (now) {
+					$(this).text(Math.ceil(now));
+				}
+			});
+		});
+	}
+
+
+	var eventFired = false,
+    objectPositionTop = $('#counters').offset().top;
+
+	$(window).on('scroll', function() {
+
+	var currentPosition = $(document).scrollTop();
+	if (currentPosition > objectPositionTop && eventFired === false) {
+	eventFired = true;
+	start_count()
+	}
+
+	});
+});

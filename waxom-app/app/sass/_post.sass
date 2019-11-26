@@ -1,0 +1,168 @@
+.posts
+    position: relative
+    padding-bottom: 80px
+
+    
+    .title 
+        @include tablet 
+            margin-top: 40px
+            
+    @include tablet 
+        padding: 0
+        margin-bottom: 40px
+    .container 
+        text-align: center
+.main-text 
+    @include tablet 
+        margin-bottom: 40px
+.nav-btns  
+    display: inline-block  
+
+    .prev1 
+        cursor: pointer
+        margin-right: 10px
+        &:hover 
+            border-color: #d1d1d1
+        .triangle
+            transform: rotate(50deg)
+
+        &:hover 
+            .triangle 
+                border-color: #d1d1d1
+
+
+    .next1 
+        cursor: pointer
+        &:hover 
+            border-color: #d1d1d1
+        .triangle
+            margin-right: 3px
+            transform: rotate(-130deg)
+
+
+    .prev1, .next1 
+        display: inline-block
+        vertical-align: middle
+        width: 20px
+        height: 20px
+        transform: translatex(-50%)
+        border: 1px solid $accent
+        border-radius: 50%
+        text-align: center
+
+        .triangle 
+            margin-top: 6px
+            margin-left: 6px
+            width: 5px
+            height: 5px
+            border-left: 1px solid $accent
+            border-bottom: 1px solid $accent
+
+
+
+.slick-arrow.slick-hidden 
+    display: inline-block
+
+.post-item
+    box-sizing: border-box 
+    position: relative 
+    width: calc(33% -30px)
+    margin: 0 15px
+    margin-bottom: 40px
+
+    .post-img 
+        margin-bottom: -5px
+        img 
+            width: 100%
+
+    .post-about 
+        padding-top: 30px
+        padding-left: 29px
+        text-align: left
+
+        @include tablet 
+            padding-left: 10px
+
+        .post-title 
+            margin: 0px 0 19px 0
+            olor: #555555
+            font-family: Raleway-medium
+            font-size: 20px
+            font-weight: 500
+
+        .post-text 
+            color: #8c8c8c
+            font-family: Montserrat-Light
+            font-size: 14px
+            font-weight: 300
+            line-height: 22px
+            margin-bottom: 19px
+
+        .post-link  
+            position: relative
+            display: inline-block
+            color: #c7b299
+            font-family: Montserrat-Light
+            font-size: 14px
+            font-weight: 300
+            line-height: 20px
+            margin-bottom: 33px
+            text-decoration: none
+
+            &:after 
+                content: ""
+                position: absolute
+                right: -10px
+                top: 50%
+                width: 5px
+                height: 8px
+                transform: translateY(-50%)
+                background-image: url(../img/icons/arrow.png)
+
+    &:hover 
+        .date .day 
+            transition: background-color .3s
+            background-color: #c7b299
+
+        .date .month 
+            transition: background-color .3s
+            background-color: #a48d72
+
+        .post-about 
+            background-color: #362f2d
+
+        .post-title 
+            transition: color .3s
+            color: #c7b299
+
+        .post-text 
+            transition: color .3s
+            color: #fff
+        
+
+            
+
+    .date 
+        position: absolute
+        left: 20px
+        top: 20px
+        overflow: hidden
+        border-radius: 3px 3px 0 0
+
+        .day 
+            padding: 9px 10px
+            color: #ffffff
+            font-family: "Montserrat-Light"
+            font-size: 24px
+            font-weight: 300
+            line-height: 1
+            background-color: #363636
+
+        .month 
+            color: #ffffff
+            font-family: "Roboto-regular"
+            font-size: 12px
+            font-weight: 400
+            line-height: 20px
+            background-color: #252525
+            border-radius: 0 0 3px 3px

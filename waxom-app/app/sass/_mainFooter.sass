@@ -1,0 +1,42 @@
+.footer 
+    background-color: #111111
+
+    .container 
+        display: flex
+        justify-content: space-between
+
+        @include laptop 
+            flex-direction: column
+            align-items: center
+        
+        .left-text, .right-text
+            display: flex
+            margin-bottom: 52px
+
+            p 
+                color: #555555
+                font-family: Montserrat-Light
+                font-size: 13px
+                font-weight: 300
+                line-height: 20px
+                padding: 0 10px
+                line-height: 1
+                border-right: 1px solid#252525
+
+                @include phone 
+                    font-size: 10px
+
+                &:last-child
+                    border: none
+
+                a   
+                    line-height: 1
+                    color: #959595
+                    text-decoration: none
+            a   
+                font-family: Montserrat-Light
+                font-size: 13px
+                font-weight: 300
+
+            @include phone 
+                font-size: 10px
